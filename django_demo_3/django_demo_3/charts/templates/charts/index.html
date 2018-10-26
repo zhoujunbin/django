@@ -1,0 +1,50 @@
+{% extends "admin/base_site.html" %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MySQL读取并显示到网页上</title>
+{#    <script type="text/javascript" src="http://echarts.baidu.com/dist/echarts.js"></script>#}
+    <script type="text/javascript" src="/static/echarts.min.js"></script>
+
+{#    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>#}
+    <script type="text/javascript" src="/static/jquery.min.js"></script>
+    <script type="text/javascript" src="/static/less.min.js"></script>
+<style type="text/css">
+    .wrap{
+          margin-top: 20px;
+          margin-left: auto;
+          margin-right: auto;
+          width: 800px;
+          height: auto;
+          background-color: #c5cae9;
+{#          background: image(static/img/11.jpg);#}
+
+}
+</style>
+
+
+
+</head>
+<body>
+
+<div class = "wrap">
+<div class="content" id="main" style="width: 800px;height: 600px;"></div>
+<div class="content" id="scatter" style="width: 700px;height:700px;"></div>
+<div class="content" id ="leida" style="width: 800px;height:800px;"></div>
+<div class="content" id ="mianji" style="width:800px;height:800px;"></div>
+<form method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="刷新">
+</form>
+</div>
+
+</body>
+<script type="text/javascript" src="/static/chart_2.js"></script>
+<script type="text/javascript" src="/static/scatter.js"></script>
+<script type="text/javascript" src="/static/leida.js"></script>
+<script type="text/javascript" src="/static/mianji.js"></script>
+</html>
+{% endblock %}
