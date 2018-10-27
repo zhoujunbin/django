@@ -18,33 +18,33 @@ public class InfoActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_info);
-//        mBtnLogOut = findViewById(R.id.btn_login);
-//        mBtnLogOut.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                //跳转到信息页面，InfoActivity
-//                Intent intent = new Intent(InfoActivity.this,MainActivity.class);
-//                startActivity(intent);
-//            }
-//        });
-//        mBtnModify = findViewById(R.id.btn_modify);
-//        mBtnModify.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                //跳转到信息页面，InfoActivity
-//                Intent intent = new Intent(InfoActivity.this,ModifyActivity.class);
-//                startActivity(intent);
-//            }
-//        });
-//        mBtnHelp = findViewById(R.id.btn_help);
-//        mBtnHelp.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                //跳转到信息页面，InfoActivity
-//                Intent intent = new Intent(InfoActivity.this,HelpActivity.class);
-//                startActivity(intent);
-//            }
-//        });
+        mBtnLogOut = findViewById(R.id.btn_LogOut);
+        mBtnLogOut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //跳转到登陆页面，InfoActivity
+                Intent intent = new Intent(InfoActivity.this,MainActivity.class);
+                startActivity(intent);
+            }
+        });
+        mBtnModify = findViewById(R.id.btn_modify);
+        mBtnModify.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //跳转到修改密码页面，InfoActivity
+                Intent intent = new Intent(InfoActivity.this,ModifyActivity.class);
+                startActivity(intent);
+            }
+        });
+        mBtnHelp = findViewById(R.id.btn_help);
+        mBtnHelp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //跳转到帮助文档页面，InfoActivity
+                Intent intent = new Intent(InfoActivity.this,HelpActivity.class);
+                startActivity(intent);
+            }
+        });
 
 
     }
