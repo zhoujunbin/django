@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp">
+    <Button
+        android:id="@+id/btn_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="姓名： 张三   性别： 男   年龄：22"
+        android:background="#ffffff"
+        android:textSize="20sp"
+        android:textColor="#000000"/>
+
+    <Button
+        android:id="@+id/btn_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="实时查询"
+        android:background="@drawable/bg_btn4"
+        android:textSize="20sp"
+        android:textColor="#000000"
+        android:layout_below="@id/btn_info"
+        android:layout_marginTop="30dp"/>
+
+    <Button
+        android:id="@+id/btn_help"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="帮助文档"
+        android:background="@drawable/bg_btn4"
+        android:textSize="20sp"
+        android:textColor="#000000"
+        android:layout_below="@id/btn_search"
+        android:layout_marginTop="15dp"/>
+
+    <Button
+        android:id="@+id/btn_modify"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="修改密码"
+        android:background="@drawable/bg_btn4"
+        android:textSize="20sp"
+        android:textColor="#000000"
+        android:layout_below="@id/btn_help"
+        android:layout_marginTop="15dp"/>
+
+    <Button
+        android:id="@+id/btn_LogOut"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="退出登陆"
+        android:background="@drawable/bg_btn4"
+        android:textSize="20sp"
+        android:textColor="#000000"
+        android:layout_below="@id/btn_modify"
+        android:layout_marginTop="15dp"/>
+
+
+</RelativeLayout>
