@@ -13,7 +13,8 @@ public class InfoActivity extends AppCompatActivity {
     private Button mBtnModify;
     private Button mBtnHelp;
     private Button mBtnAbout;
-    //private Button mBtnSearch;
+    private Button mBtnSearch;
+    private Button mBtnAdmin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,7 +56,24 @@ public class InfoActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
+        mBtnSearch = findViewById(R.id.btn_search);
+        mBtnSearch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //跳转到心率、血氧数据显示页面
+                Intent intent = new Intent(InfoActivity.this,EchartsActivity.class);
+                startActivity(intent);
+            }
+        });
+        mBtnAdmin = findViewById(R.id.btn_admin);
+        mBtnAdmin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //跳转到站点管理页面
+                Intent intent = new Intent(InfoActivity.this,AdminActivity.class);
+                startActivity(intent);
+            }
+        });
 
     }
 }
