@@ -12,6 +12,7 @@ public class InfoActivity extends AppCompatActivity {
     private Button mBtnLogOut;
     private Button mBtnModify;
     private Button mBtnHelp;
+    private Button mBtnAbout;
     //private Button mBtnSearch;
 
     @Override
@@ -22,7 +23,7 @@ public class InfoActivity extends AppCompatActivity {
         mBtnLogOut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //跳转到登陆页面，InfoActivity
+                //跳转到登陆页面
                 Intent intent = new Intent(InfoActivity.this,MainActivity.class);
                 startActivity(intent);
             }
@@ -31,7 +32,7 @@ public class InfoActivity extends AppCompatActivity {
         mBtnModify.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //跳转到修改密码页面，InfoActivity
+                //跳转到修改密码页面
                 Intent intent = new Intent(InfoActivity.this,ModifyActivity.class);
                 startActivity(intent);
             }
@@ -42,6 +43,15 @@ public class InfoActivity extends AppCompatActivity {
             public void onClick(View v) {
                 //跳转到帮助文档页面，InfoActivity
                 Intent intent = new Intent(InfoActivity.this,HelpActivity.class);
+                startActivity(intent);
+            }
+        });
+        mBtnAbout = findViewById(R.id.btn_about);
+        mBtnAbout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //跳转到关于我们页面
+                Intent intent = new Intent(InfoActivity.this,AboutActivity.class);
                 startActivity(intent);
             }
         });

@@ -19,6 +19,8 @@
         <activity android:name=".HelpActivity" />
         <activity android:name=".ModifyActivity" />
         <activity android:name=".InfoActivity" />
+        <activity android:name=".RegisterActivity" />
+        <activity android:name=".AboutActivity"></activity>
     </application>
 
 </manifest>

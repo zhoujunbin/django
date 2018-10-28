@@ -9,8 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:textSize="16sp"
-        android:hint="请输入原密码"
-        android:inputType="textPassword"
+        android:hint="请输入用户名"
         android:paddingLeft="10dp"
         android:maxLines="1"
         android:maxLength="10"
@@ -21,10 +20,9 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:textSize="16sp"
-        android:hint="输入新密码"
-        android:inputType="textPassword"
-        android:layout_below="@+id/et_1"
-        android:layout_marginTop="15dp"
+        android:hint="请输入手机号"
+        android:inputType="number"
+        android:layout_below="@id/et_1"
         android:paddingLeft="10dp"
         android:maxLines="1"
         android:maxLength="10"/>
@@ -34,7 +32,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:textSize="16sp"
-        android:hint="确认新密码"
+        android:hint="请输入密码"
         android:inputType="textPassword"
         android:layout_below="@+id/et_2"
         android:layout_marginTop="15dp"
@@ -42,13 +40,26 @@
         android:maxLines="1"
         android:maxLength="10"/>
 
-    <Button
-        android:id="@+id/btn_confirm"
+    <EditText
+        android:id="@+id/et_4"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_below="@id/et_3"
+        android:textSize="16sp"
+        android:hint="确认密码"
+        android:inputType="textPassword"
+        android:layout_below="@+id/et_3"
+        android:layout_marginTop="15dp"
+        android:paddingLeft="10dp"
+        android:maxLines="1"
+        android:maxLength="10"/>
+
+    <Button
+        android:id="@+id/btn_register"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/et_4"
         android:layout_marginTop="40dp"
-        android:text="确认修改"
+        android:text="注册"
         android:textSize="20sp"
         android:background="@drawable/bg_btn3"/>
 

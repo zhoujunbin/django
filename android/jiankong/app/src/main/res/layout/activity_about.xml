@@ -4,10 +4,10 @@
     android:layout_height="match_parent"
     android:padding="15dp">
     <Button
-        android:id="@+id/btn_zhinan"
+        android:id="@+id/btn_about"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="使用指南"
+        android:text="关于我们"
         android:background="#ffffff"
         android:textSize="20sp"
         android:textColor="#000000"/>
@@ -16,8 +16,8 @@
         android:id="@+id/text_1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/btn_zhinan"
-        android:text="1.本项目为病人远程监控系统"
+        android:layout_below="@id/btn_about"
+        android:text="单位：浙江大学信电学院"
         android:textSize="22sp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
@@ -27,7 +27,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/text_1"
-        android:text="2.具有心率、血氧实时检测功能"
+        android:text="课程：电子信息智能综合实验"
         android:textSize="22sp"
         android:layout_marginTop="5dp"
         android:layout_marginLeft="10dp"
@@ -37,18 +37,19 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/text_2"
-        android:text="3.您可在主页面点击“实时监控”按钮来进行心率、血氧 的实时监测"
+        android:text="版本信息：1.0"
         android:textSize="22sp"
         android:layout_marginTop="5dp"
         android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"/>
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="30dp"/>
     <TextView
         android:id="@+id/text_4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/text_3"
-        android:text="4.心率和血氧数据将以折线图和直方图的形式展现，方便阅读"
-        android:textSize="22sp"
+        android:text="开发人员：周军彬，高星星"
+        android:textSize="20sp"
         android:layout_marginTop="5dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"/>
@@ -57,21 +58,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/text_4"
-        android:text="5."
-        android:textSize="22sp"
+        android:text="联系我们：3150102481@zju.edu.cn"
+        android:textSize="20sp"
         android:layout_marginTop="5dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"/>
-    <TextView
-        android:id="@+id/text_6"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/text_5"
-        android:text="6."
-        android:textSize="22sp"
-        android:layout_marginTop="5dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"/>
+
 
 
 

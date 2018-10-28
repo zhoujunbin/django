@@ -11,6 +11,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
     private  Button mBtnLogin;
+    private  Button mBtnRegister;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +23,15 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 //跳转到信息页面，InfoActivity
                 Intent intent = new Intent(MainActivity.this,InfoActivity.class);
+                startActivity(intent);
+            }
+        });
+        mBtnRegister = findViewById(R.id.btn_regist);
+        mBtnRegister.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //跳转到注册页面
+                Intent intent = new Intent(MainActivity.this,RegisterActivity.class);
                 startActivity(intent);
             }
         });

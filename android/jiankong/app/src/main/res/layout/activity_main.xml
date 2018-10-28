@@ -35,7 +35,18 @@
         android:layout_below="@id/et_2"
         android:layout_marginTop="40dp"
         android:text="登陆"
-        android:textSize="20sp"/>
+        android:textSize="20sp"
+        android:background="@drawable/bg_btn2"/>
+
+    <Button
+        android:id="@+id/btn_regist"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/btn_login"
+        android:layout_marginTop="10dp"
+        android:text="注册新账户"
+        android:textSize="20sp"
+        android:background="@drawable/bg_btn3"/>
 
 
 </RelativeLayout>
