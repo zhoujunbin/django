@@ -41,7 +41,6 @@
             data: {},
             dataType: "json",
             success: function (data) {
-                // console.log(data);
                 myChart.hideLoading();
 
                 var d = data["data"];
@@ -58,25 +57,21 @@
                     }
                 }
 
-                // console.log("心率");
-                // console.log(xinlv);
-                // console.log("时间");
-                // console.log(time);
 
                 myChart.setOption({
-                    title : {
-                        text: '病人心率、血氧实时监测',
-                        //subtext: '数据来自西安兰特水电测控技术有限公司',
-                        x: 'center',
-                        //align: 'right'
-                    },
+                    // title : {
+                    //     text: '实时监测',
+                    //     //subtext: '数据来自西安兰特水电测控技术有限公司',
+                    //     x: 'center',
+                    //     //align: 'right'
+                    // },
                     toolbox: {
                         feature: {
                             dataZoom: {
                                 yAxisIndex: 'none'
                             },
                             dataView: {readOnly: false},
-                            restore: {},
+                           // restore: {},
                             saveAsImage: {}
                         }
                     },
@@ -92,7 +87,7 @@
                     },
                     legend: {
                         data:['心率','血氧'],
-                        x: 'left'
+                        x: 'center'
                     },
                     grid: [{
                         left: 50,
@@ -134,7 +129,7 @@
                             name: '心率(次/min)',
                             type: 'value',
                             // position: 'left',
-                            min: 0,
+                            min: 50,
                             max: 200
                         },
                         {
@@ -143,7 +138,7 @@
                             // nameLocation: 'start',
                             type: 'value',
                             //position: 'right',
-                            min: 0,
+                            min: 50,
                             max: 200,
                             // inverse: true
                         }
