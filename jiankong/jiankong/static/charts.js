@@ -19,7 +19,7 @@
         dataType: "json",
         success: function (data) {
             var d = data["data"];
-            for (var i = 0; i < d.length; i++) {
+            for (var i = d.length-100; i < d.length; i++) {
                 xinlv.push(d[i][1]);
                 xueyang.push(d[i][2]);
                 time.push(d[i][0]);
@@ -45,18 +45,27 @@
 
                 var d = data["data"];
                 console.log(d[d.length-1][0]);
-                console.log(time[time.length-1]);
+                console.log(time[time.length-1]);time.length
+                console.log("time.length");
+                console.log(time.length);
+                //对比数据库，实时更新数据
                 if (data) {
                     if (d[d.length-1][0]!=time[time.length-1]){
                         xinlv.shift();
                         xinlv.push(d[d.length-1][1]);
                         xueyang.shift();
-                        xueyang.push(d[d.length-1][1]);
+                        xueyang.push(d[d.length-1][2]);
                         time.shift();
                         time.push(d[d.length-1][0]);
                     }
                 }
-
+                var str_time1 = d[d.length-1][0];
+                var str_time2 = str_time1.replace('T',' ');
+                var str_time = str_time2.replace('Z',' ');
+                var message = document.getElementById('message');
+                message.innerHTML = '姓名:张三'+'&nbsp&nbsp&nbsp&nbsp'+'监测时间:'+str_time;
+                var num = document.getElementById('num');
+                num.innerHTML = '心率:'+d[d.length-1][1]+'&nbsp&nbsp&nbsp&nbsp'+'血氧:'+d[d.length-1][2];
 
                 myChart.setOption({
                     // title : {
