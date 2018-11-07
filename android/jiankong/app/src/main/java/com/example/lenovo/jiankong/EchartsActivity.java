@@ -18,7 +18,7 @@ public class EchartsActivity extends AppCompatActivity {
         mWvMain = findViewById(R.id.wv);
         mWvMain.setWebChromeClient(new MyWebChromeClient());
         mWvMain.getSettings().setJavaScriptEnabled(true);
-        mWvMain.loadUrl("http://192.168.43.238:8000");
+        mWvMain.loadUrl("http://10.180.145.154:8000");
 
     }
 

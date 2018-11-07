@@ -19,7 +19,7 @@ public class AdminActivity extends AppCompatActivity {
         mWvAdmin = findViewById(R.id.wv);
         mWvAdmin.getSettings().setJavaScriptEnabled(true);
         mWvAdmin.setWebViewClient(new MyWebViewClient());
-        mWvAdmin.loadUrl("http://192.168.43.238:8000/admin/");
+        mWvAdmin.loadUrl("http://10.180.145.154:8000/admin/");
 
     }
     class MyWebViewClient extends WebViewClient{
