@@ -14,11 +14,18 @@
 
 // html页面设计，调用echarts.js绘制图像，利用ajax从数据库定时获取数据并显示到图像中
 
+//************************************************************
+//android 开发
+//************************************************************
+# WebView 做网页链接时 出现“net:ERR_CACHE_MISS”问题
+# 解决方法：需要在AndroidManifest.xml中添加网络权限：
+<uses-permission android:name="android.permission.INTERNET"/>
+
 
 
 
 //向数据库中插入数据的命令行
-INSERT INTO myapp_mytable (name, gender, date, xinlv, xueyang, xinlv_abnormal, xueyang_abnormal, isDelete) VALUES
+INSERT INTO myApp_mytable (name, gender, date, xinlv, xueyang, xinlv_abnormal, xueyang_abnormal, isDelete) VALUES
 ('周周周','0','2018-03-02 00:00:00','80','0','90','0','0'),
 ('周周周','0','2017-03-02 00:00:30','90','0','90','0','0'),
 ('周周周','0','2017-03-02 00:01:00','100','0','90','0','0'),

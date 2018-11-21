@@ -5,7 +5,7 @@ from django.db import models
 class MyTable(models.Model):
     name = models.CharField(max_length=20)
     gender = models.BooleanField(default=False)
-    date = models.DateTimeField()
+    date = models.CharField(max_length=20)
     xinlv = models.IntegerField()
     xueyang = models.IntegerField()
     xinlv_abnormal = models.BooleanField(default=False)

@@ -1,5 +1,5 @@
     //在浏览器控制台中测试是否进入此文件
-    console.log('888888888888');
+    console.log('进入charts.js');
 
 //以下为病人“心率”和“血氧”实时检测图像绘制
     //初始化一个图表
@@ -18,12 +18,14 @@
         data: {},
         dataType: "json",
         success: function (data) {
+            console.log(data);
             var d = data["data"];
-            for (var i = d.length-100; i < d.length; i++) {
+            for (var i = d.length-50; i < d.length; i++) {
                 xinlv.push(d[i][1]);
                 xueyang.push(d[i][2]);
                 time.push(d[i][0]);
             }
+            console.log(d);
         }
     })
 
@@ -45,7 +47,7 @@
 
                 var d = data["data"];
                 console.log(d[d.length-1][0]);
-                console.log(time[time.length-1]);time.length
+                console.log(time[time.length-1]);
                 console.log("time.length");
                 console.log(time.length);
                 //对比数据库，实时更新数据
@@ -68,12 +70,6 @@
                 num.innerHTML = '心率:'+d[d.length-1][1]+'&nbsp&nbsp&nbsp&nbsp'+'血氧:'+d[d.length-1][2];
 
                 myChart.setOption({
-                    // title : {
-                    //     text: '实时监测',
-                    //     //subtext: '数据来自西安兰特水电测控技术有限公司',
-                    //     x: 'center',
-                    //     //align: 'right'
-                    // },
                     toolbox: {
                         feature: {
                             dataZoom: {
@@ -114,42 +110,36 @@
                             boundaryGap: false,
                             axisLine: {onZero: false},
                             data: time.map(function (str){
-                                var str1 = str.replace('T','\n');
-                                var str2 = str1.replace('Z',' ');
-                                return str2;
+                                var str1 = str.substr(11,8);
+                                // var str2 = str1.replace('Z',' ');
+                                return str1;
                             })
                         },
                         {
                             gridIndex: 1,
-                            // show: false;
                             type: 'category',
                             boundaryGap: false,
                             axisLine: {onZero: false},
                             data: time.map(function (str){
-                                var str1 = str.replace('T','\n');
-                                var str2 = str1.replace('Z',' ');
-                                return str2;
+                                var str1 = str.substr(11,8);
+                                // var str2 = str1.replace('Z',' ');
+                                return str1;
                             }),
-                            // position: 'top'
                         }
                     ],
                     yAxis: [
                         {
                             name: '心率(次/min)',
                             type: 'value',
-                            // position: 'left',
                             min: 50,
                             max: 200
                         },
                         {
                             gridIndex: 1,
                             name: '血氧(ml/L)',
-                            // nameLocation: 'start',
                             type: 'value',
-                            //position: 'right',
                             min: 50,
                             max: 200,
-                            // inverse: true
                         }
                     ],
                     series: [
@@ -167,7 +157,7 @@
                         },
                         {
                             "name": "血氧",
-                            "type": 'bar',
+                            "type": 'line',
                             xAxisIndex:1,
                             yAxisIndex:1,
                             "markArea": {
