@@ -5,7 +5,7 @@
     android:padding="15dp">
 
     <EditText
-        android:id="@+id/et_1"
+        android:id="@+id/et_userName"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:textSize="16sp"
@@ -16,13 +16,13 @@
         android:layout_marginTop="50dp"/>
 
     <EditText
-        android:id="@+id/et_2"
+        android:id="@+id/et_psw"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:textSize="16sp"
         android:hint="密码"
         android:inputType="textPassword"
-        android:layout_below="@+id/et_1"
+        android:layout_below="@+id/et_userName"
         android:layout_marginTop="15dp"
         android:paddingLeft="10dp"
         android:maxLines="1"
@@ -32,7 +32,7 @@
         android:id="@+id/btn_login"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_below="@id/et_2"
+        android:layout_below="@id/et_psw"
         android:layout_marginTop="40dp"
         android:text="登陆"
         android:textSize="20sp"
