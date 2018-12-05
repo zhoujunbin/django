@@ -65,9 +65,9 @@
                 var str_time2 = str_time1.replace('T',' ');
                 var str_time = str_time2.replace('Z',' ');
                 var message = document.getElementById('message');
-                message.innerHTML = '姓名:张三'+'&nbsp&nbsp&nbsp&nbsp'+'监测时间:'+str_time;
+                message.innerHTML = '姓名:张三'+'&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp'+'监测时间:'+str_time;
                 var num = document.getElementById('num');
-                num.innerHTML = '心率:'+d[d.length-1][1]+'&nbsp&nbsp&nbsp&nbsp'+'血氧:'+d[d.length-1][2];
+                num.innerHTML = '心率（次/分）:'+d[d.length-1][1]+'&nbsp&nbsp&nbsp&nbsp'+'血氧饱和度（%）:'+d[d.length-1][2];
 
                 myChart.setOption({
                     toolbox: {
@@ -132,14 +132,14 @@
                             name: '心率(次/min)',
                             type: 'value',
                             min: 50,
-                            max: 200
+                            max: 150
                         },
                         {
                             gridIndex: 1,
-                            name: '血氧(ml/L)',
+                            name: '血氧饱和度(%)',
                             type: 'value',
                             min: 50,
-                            max: 200,
+                            max: 100,
                         }
                     ],
                     series: [
@@ -156,15 +156,15 @@
                             "data": xinlv
                         },
                         {
-                            "name": "血氧",
+                            "name": "血氧饱和度",
                             "type": 'line',
                             xAxisIndex:1,
                             yAxisIndex:1,
                             "markArea": {
                                 silent: true,
                                 data: [[{
-                                    yAxis: 110
-                                },{ yAxis: 180
+                                    yAxis: 98
+                                },{ yAxis: 98.01
                                 }]]
                             },
                             "data": xueyang
