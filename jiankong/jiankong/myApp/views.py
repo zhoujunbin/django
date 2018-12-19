@@ -10,11 +10,14 @@ import json
 def index(request):
     return render(request, 'myApp/data.html')
 
+def history(request):
+    return render(request, 'myApp/history.html')
+
 from django.http import JsonResponse
 def datainfo(request):
     stus = MyTable.objects.all()
     list = []
     for stu in stus:
         list.append([stu.date,stu.xinlv,stu.xueyang])
-    print(list)
+    # print(list)
     return JsonResponse({"data":list})

@@ -45,7 +45,7 @@ class MyTableAdmin(admin.ModelAdmin):
     #list page setting
     list_display = ['pk',gname,ggender,gdate,gxinlv,gxinlv_abnormal,gxueyang,gxueyang_abnormal]
     #list_display = ['pk',name,date,xinlv,xueyang,Delete]
-    list_filter = ['name','date','xinlv_abnormal','xueyang_abnormal']
+    list_filter = ['name','xinlv_abnormal','xueyang_abnormal']
     list_per_page = 50
     
     #add, modify page settings
